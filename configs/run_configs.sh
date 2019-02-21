@@ -6,4 +6,7 @@ do
     cd nx_${nx};
     sbatch submit.sh;
     cd ..;
+    cd nx_large_${nx};
+    sbatch submit.sh;
+    cd ..;
 done
