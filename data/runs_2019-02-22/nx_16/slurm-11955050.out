@@ -1,0 +1,24 @@
+==6883== NVPROF is profiling process 6883, command: /users/klye/alsvinn/build/alsuqcli/alsuqcli kelvinhelmholtz_3d_tube/kelvinhelmholtz.xml
+[2019-02-21 04:13:13.753256] [0x00002aaaaab60f00] [info]    Number of GPUs on node: 1
+omp max threads= 1
+==6883== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==6883== Generated result file: /scratch/snx3000/klye/alsvinn_metrics/configs/nx_16/output_16.nvprof
+ 
+Batch Job Summary Report for Job "nvproftimeline_16" (11955050) on daint
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed  Timelimit 
+------------------- ------------------- ------------------- ------------------- ---------- ---------- 
+2019-02-21T04:12:33 2019-02-21T04:12:33 2019-02-21T04:12:43 2019-02-21T04:15:05   00:02:22 1-00:00:00 
+-----------------------------------------------------------------------------------------------------
+Username    Account     Partition   NNodes   Energy
+----------  ----------  ----------  ------  --------------
+klye        s839        normal           1   13.93K joules
+----------------------------------------------------------
+gpusecs  maxgpusecs        maxmem            summem
+-------  ----------  ------------  ----------------
+      3           3     332398592         637534208
+----------------------------------------------------------
+Scratch File System        Files       Quota
+--------------------  ----------  ----------
+/scratch/snx3000            1815     1000000
+ 
