@@ -171,11 +171,6 @@ def get_current_title():
 
 def savePlot(name):
     original_name = copy.deepcopy(name)
-    if savePlot.disabled:
-        return
-
-
-
 
     name = showAndSave.prefix + name
     name = ''.join(ch for ch in name if ch.isalnum() or ch =='_')
