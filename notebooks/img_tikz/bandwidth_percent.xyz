@@ -33,7 +33,7 @@ table [row sep=\\]{%
   rotate=0.0,
   align=right
 ]{ By Kjetil Lye@ETHZ <kjetil.o.lye@gmail.com>
-Commit: 4addac37980ea21d98bf3df884eef35f54b187a5
+Commit: 275c8eee76bc2c42689188a2bc2c00500b035227
 Repo: git@github.com:kjetil-lye/alsvinn_metrics.git
 Hostname: lyelaptop};
 \node at (axis cs:0.2,0.93)[
@@ -41,7 +41,7 @@ Hostname: lyelaptop};
   anchor=south east,
   text=black,
   rotate=0.0
-]{ @4add};
+]{ @275c};
 \end{axis}
 
 \end{tikzpicture}
@@ -52,14 +52,14 @@ Hostname: lyelaptop};
 
 %% ALWAYS INCLUDE THE COMMENTS WHEN COPYING THIS PLOT
 %% DO NOT REMOVE THE COMMENTS BELOW!
-%% GIT git_commit : 4addac37980ea21d98bf3df884eef35f54b187a5
-%% GIT git_repo_modified : False
+%% GIT git_commit : 275c8eee76bc2c42689188a2bc2c00500b035227
+%% GIT git_repo_modified : True
 %% GIT git_branch : master
 %% GIT git_remote_url : git@github.com:kjetil-lye/alsvinn_metrics.git
-%% GIT git_short_commit : 4add
+%% GIT git_short_commit : 275c
 %% working_directory : /home/kjetil/projects/alsvinn_metrics/notebooks
 %% hostname : lyelaptop
-%% generated_on_date : 2019-02-22 19:09:02.993672
+%% generated_on_date : 2019-02-23 16:14:51.449731
 %% python_version: /usr/bin/python3 (Version: 3.7.2 (default, Jan 10 2019, 23:51:51) 
 [GCC 8.2.1 20181127])
 %% python modules:
