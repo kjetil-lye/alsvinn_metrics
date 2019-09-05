@@ -18,7 +18,7 @@
   </equationParameters>
   <reconstruction>weno2</reconstruction>
   <cfl>auto</cfl>
-  <integrator>auto</integrator>
+  <integrator>forwardeuler</integrator>
   <functionals>
 
 

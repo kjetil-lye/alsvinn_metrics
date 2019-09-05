@@ -1,5 +1,5 @@
 def init_global(rho, ux, uy, uz, p, nx, ny, nz, ax, ay, az, bx, by, bz):
-    N = len(a)/6
+    N = len(a)//6
     a1 = a[:N]
     a2 = a[N:2*N]
     a3 = a[2*N:3*N]

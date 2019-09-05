@@ -7,11 +7,11 @@
   <grid>
     <lowerCorner>0 0 0</lowerCorner>
     <upperCorner>1 1 1</upperCorner>
-    <dimension>64 64 64</dimension>
+    <dimension>410 410 410</dimension>
   </grid>
   <boundary>periodic</boundary>
   <flux>hll3</flux>
-  <endTime>0.02</endTime>
+  <endTime>0.001</endTime>
   <equation>euler3</equation>
   <equationParameters>
     <gamma>1.4</gamma>

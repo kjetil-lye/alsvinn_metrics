@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-for nx in 16 32 64 128 256;
+for nx in 16 32 64 128 256 410;
 do
 
     cp -r template nx_${nx};
