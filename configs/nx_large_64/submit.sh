@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=normal
 #SBATCH --constraint=gpu
-#SBATCH --account=s839
+#SBATCH --account=s913
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
