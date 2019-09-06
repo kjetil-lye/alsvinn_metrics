@@ -1,0 +1,165 @@
+{
+    "report": {
+        "software": "alsvinn https:\/\/github.com\/alsvinn",
+        "softwareVersion": "0.5.3",
+        "currentWorkingDirectory": "\/scratch\/snx3000\/klye\/alsvinn_metrics\/configs\/nx_128",
+        "operatingSystem": "Linux: Linux 4.4.103-6.38_4.0.153-cray_ari_c #1 SMP Thu Nov 1 16:05:05 UTC 2018 (6ef8fef) x86_64",
+        "username": "klye",
+        "host": "nid05331",
+        "standardCLibrary": "GNU libc 2.22 stable",
+        "generatedAt": "20190905T135323",
+        "CPU": "Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz",
+        "revision": "1ecc2374d6c8618b8e01e65bf7fd4c4bbfb95b7e",
+        "versionControlStatus": "DIRTY",
+        "buildType": "Release",
+        "cxxFlags": "",
+        "cxxFlagsDebug": "-g",
+        "cxxFlagsRelease": "-O3 -DNDEBUG",
+        "cxxFlagsMinSizeRel": "-Os -DNDEBUG",
+        "cxxFlagsRelWithDebInfo": "-O2 -g -DNDEBUG",
+        "cudaFlags": "--use_fast_math -Xptxas -warn-spills -gencode arch=compute_50,code=sm_50 -gencode arch=compute_60,code=sm_60  -gencode arch=compute_61,code=sm_61",
+        "cudaVersion": "9.2",
+        "cxxCompiler": "GNU 6.2.0",
+        "cudaCompiler": "NVIDIA 9.2.148",
+        "boost": {
+            "BOOST_VERSION": "107000",
+            "BOOST_LIB_VERSION": "1_70",
+            "BOOST_PLATFORM": "linux",
+            "BOOST_PLATFORM_CONFIG": "boost\/config\/platform\/linux.hpp",
+            "BOOST_COMPILER": "GNU C++ version 6.2.0 20160822 (Cray Inc.)",
+            "BOOST_LIBSTDCXX_VERSION": "60200",
+            "C++11": "true",
+            "BOOST_STDLIB": "GNU libstdc++ version 20160822",
+            "BOOST_STDLIB_CONFIG": "boost\/config\/stdlib\/libstdcpp3.hpp"
+        },
+        "floatingPointPrecisionDescription": "double (double precision, 64 bits)",
+        "floatingPointType": "double",
+        "floatingPointMax": "1.79769e+308",
+        "floatingPointMin": "2.22507e-308",
+        "floatingPointEpsilon": "2.22045e-16",
+        "cudaProperties": {
+            "name": "Tesla P100-PCIE-16GB",
+            "totalGlobalMem": "17071734784",
+            "sharedMemPerBlock": "49152",
+            "regsPerBlock": "65536",
+            "warpSize": "32",
+            "memPitch": "2147483647",
+            "maxThreadsPerBlock": "1024",
+            "maxThreadsDim": "1024, 1024, 64",
+            "maxGridSize": "2147483647, 65535, 65535",
+            "totalConstMem": "65536",
+            "major": "6",
+            "minor": "0",
+            "clockRate": "1328500",
+            "textureAlignment": "512",
+            "deviceOverlap": "1",
+            "multiProcessorCount": "56",
+            "kernelExecTimeoutEnabled": "0",
+            "integrated": "0",
+            "canMapHostMemory": "1",
+            "computeMode": "3",
+            "concurrentKernels": "1",
+            "ECCEnabled": "1",
+            "pciBusID": "2",
+            "pciDeviceID": "0",
+            "tccDriver": "0"
+        },
+        "mpiEnabled": "true",
+        "mpiProcesses": "1",
+        "mpiVersion": "MPI VERSION    : CRAY MPICH version 7.7.2 (ANL base 3.2)\nMPI BUILD INFO : Built Thu Jul 19 20:01:04 2018 (git hash 5d705bad2) MT-G",
+        "ompEnabled": "true",
+        "ompThreads": "1",
+        "loadedTextFiles": {
+            "_dash_scratch_dash_snx3000_dash_klye_dash_alsvinn_metrics_dash_configs_dash_nx_128_dash_kelvinhelmholtz_3d_tube_dash_kelvinhelmholtz_DOT_py": "def init_global(rho, ux, uy, uz, p, nx, ny, nz, ax, ay, az, bx, by, bz):\n    N = len(a)\/\/6\n    a1 = a[:N]\n    a2 = a[N:2*N]\n    a3 = a[2*N:3*N]\n    b1 = a[3*N:4*N]\n    b2 = a[4*N:5*N]\n    b3 = a[5*N:6*N]\n\n    perturbation = 0.1\n    normalization1 = sum(a1)\n    if abs(normalization1) < 1e-10:\n        normalization1 = 1\n    normalization2 = sum(a2)\n    if abs(normalization2) < 1e-10:\n        normalization2 = 1\n\n    x = linspace(ax, bx, nx)\n    y = linspace(ay, by, ny)\n    z = linspace(az, bz, nz)\n    Y, X, Z = meshgrid(y, x, z)\n    X = X\n    Y = Y\n    Z = Z\n\n    R = sqrt((Y - 0.5)**2 + (Z - 0.5)**2)\n\n    Theta = arctan2(Z, Y)\n    perturbation_radius = perturbation*sum([a1[i]*cos(2*pi*(i+1)*(R+b1[i])) for i in range(len(a1))], 0)\/normalization1\n    perturbation_radius += perturbation*sum([a2[i]*cos(2*pi*(i+1)*(Theta+b2[i])) for i in range(len(a2))], 0)\/normalization2\n    perturbation_radius += perturbation*sum([a3[i]*cos(2*pi*(i+1)*(X+b3[i])) for i in range(len(a3))], 0)\/normalization2\n    perturbation_radius \/= 2\n\n    middle = (R < 0.25 + perturbation_radius)\n\n    rho[:, :, :] = 2.0 * middle + 1.0*(1-middle)\n    ux[:, :, :] = -0.5*middle + 0.5*(1-middle)\n    uy[:,:,:] = zeros_like(X)\n    uz[:,:,:] = zeros_like(X)\n    p[:,:,:] = 2.5*ones_like(X)\n",
+            "_dash_scratch_dash_snx3000_dash_klye_dash_alsvinn_metrics_dash_configs_dash_nx_128_dash_kelvinhelmholtz_3d_tube_dash_kelvinhelmholtz_DOT_xml": "<config>\n<fvm>\n  <name>\n    kh\n  <\/name>\n  <platform>cuda<\/platform>\n  <grid>\n    <lowerCorner>0 0 0<\/lowerCorner>\n    <upperCorner>1 1 1<\/upperCorner>\n    <dimension>128 128 128<\/dimension>\n  <\/grid>\n  <boundary>periodic<\/boundary>\n  <flux>hll3<\/flux>\n  <endTime>0.02<\/endTime>\n  <equation>euler3<\/equation>\n  <equationParameters>\n    <gamma>1.4<\/gamma>\n  <\/equationParameters>\n  <reconstruction>weno2<\/reconstruction>\n  <cfl>auto<\/cfl>\n  <integrator>forwardeuler<\/integrator>\n  <functionals>\n\n\n  <\/functionals>\n  <initialData>\n    <python>kelvinhelmholtz.py<\/python>\n    <parameters>\n      <parameter>\n        <name>a<\/name>\n        <length>60<\/length>\n        <values><value>0<\/value><\/values>\n      <\/parameter>\n    <\/parameters>\n  <\/initialData>\n  <diffusion>\n    <name>none<\/name>\n    <reconstruction>none<\/reconstruction>\n  <\/diffusion>\n<\/fvm>\n<uq>\n  <samples>1<\/samples>\n  <generator>auto<\/generator>\n  <parameters>\n    <parameter>\n      <name>a<\/name>\n      <length>60<\/length>\n      <type>uniform<\/type>\n    <\/parameter>\n  <\/parameters>\n  <stats>\n  <\/stats>\n<\/uq>\n<\/config>\n"
+        },
+        "pythonVersion": "Runtime: 3.6.5 (default, Oct  8 2018, 17:39:55) \n[GCC 7.3.0 20180125 (Cray Inc.)], compile time: 3.6.5",
+        "alsvinnInDocker": "false",
+        "timings": {
+            "allTimedEvents": {
+                "totalTime": "587.94677380099995",
+                "percentOfProgramTotalTime": "100",
+                "hasIndividualTimeData": "false",
+                "alsvinn": {
+                    "totalTime": "587.94677380099995",
+                    "percentOfProgramTotalTime": "100",
+                    "hasIndividualTimeData": "true",
+                    "fvm": {
+                        "totalTime": "506.88383589600028",
+                        "percentOfProgramTotalTime": "87",
+                        "hasIndividualTimeData": "false",
+                        "init": {
+                            "totalTime": "3.2032831279999998",
+                            "percentOfProgramTotalTime": "1",
+                            "hasIndividualTimeData": "false",
+                            "python": {
+                                "totalTime": "3.2032831279999998",
+                                "percentOfProgramTotalTime": "1",
+                                "hasIndividualTimeData": "true",
+                                "evaluation": {
+                                    "totalTime": "0.00088488900000000003",
+                                    "percentOfProgramTotalTime": "1",
+                                    "hasIndividualTimeData": "true"
+                                },
+                                "init_global": {
+                                    "totalTime": "2.7029561630000001",
+                                    "percentOfProgramTotalTime": "1",
+                                    "hasIndividualTimeData": "true"
+                                }
+                            }
+                        },
+                        "numflux": {
+                            "totalTime": "424.71463433800017",
+                            "percentOfProgramTotalTime": "73",
+                            "hasIndividualTimeData": "true"
+                        },
+                        "reconstruction": {
+                            "totalTime": "78.965918430000102",
+                            "percentOfProgramTotalTime": "14",
+                            "hasIndividualTimeData": "true"
+                        }
+                    },
+                    "mpi": {
+                        "totalTime": "0.0038982629999999995",
+                        "percentOfProgramTotalTime": "1",
+                        "hasIndividualTimeData": "false",
+                        "exchange": {
+                            "totalTime": "0.0038982629999999995",
+                            "percentOfProgramTotalTime": "1",
+                            "hasIndividualTimeData": "true",
+                            "wait": {
+                                "totalTime": "4.7087000000000005e-05",
+                                "percentOfProgramTotalTime": "1",
+                                "hasIndividualTimeData": "true"
+                            }
+                        }
+                    },
+                    "uq": {
+                        "totalTime": "0.016328229999999999",
+                        "percentOfProgramTotalTime": "1",
+                        "hasIndividualTimeData": "false",
+                        "generate": {
+                            "totalTime": "1.1116e-05",
+                            "percentOfProgramTotalTime": "1",
+                            "hasIndividualTimeData": "true"
+                        },
+                        "init": {
+                            "totalTime": "0.016317114000000001",
+                            "percentOfProgramTotalTime": "1",
+                            "hasIndividualTimeData": "true"
+                        }
+                    }
+                }
+            }
+        },
+        "executable": "alsuqcli",
+        "name": "kh",
+        "endTime": "20190905T135323",
+        "cpuDuration": "587168",
+        "cpuDurationHuman": "00:09:47",
+        "wallTime": "588000",
+        "wallTimeHuman": "00:09:48",
+        "timesteps": "37",
+        "command": "\/users\/klye\/alsvinn\/build\/alsuqcli\/alsuqcli kelvinhelmholtz_3d_tube\/kelvinhelmholtz.xml "
+    }
+}
