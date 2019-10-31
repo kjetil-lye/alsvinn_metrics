@@ -2,47 +2,38 @@
 \begin{tikzpicture}
 
 \definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
-\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
 
 \begin{axis}[
 height=\figureheight,
-legend cell align={left},
-legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
 log basis x={10},
-log basis y={10},
 tick align=outside,
 tick pos=left,
 width=\figurewidth,
 x grid style={white!69.01960784313725!black},
 xlabel={Number of cells},
+xmajorgrids,
 xmin=2518.02690874137, xmax=112111755.049157,
 xmode=log,
 xtick style={color=black},
 xtick={100,1000,10000,100000,1000000,10000000,100000000,1000000000,10000000000},
 xticklabels={\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\),\(\displaystyle {10^{4}}\),\(\displaystyle {10^{5}}\),\(\displaystyle {10^{6}}\),\(\displaystyle {10^{7}}\),\(\displaystyle {10^{8}}\),\(\displaystyle {10^{9}}\),\(\displaystyle {10^{10}}\)},
 y grid style={white!69.01960784313725!black},
-ylabel={Achieved bandwidth (GB/s)},
-ymin=0.382418888753854, ymax=1049.04821687328,
-ymode=log,
+ylabel={Achieved bandwidth (\% of max)},
+ymajorgrids,
+ymin=-0.030366903322489, ymax=0.654176551436415,
 ytick style={color=black},
-ytick={0.01,0.1,1,10,100,1000,10000,100000},
-yticklabels={\(\displaystyle {10^{-2}}\),\(\displaystyle {10^{-1}}\),\(\displaystyle {10^{0}}\),\(\displaystyle {10^{1}}\),\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\),\(\displaystyle {10^{4}}\),\(\displaystyle {10^{5}}\)}
+ytick={-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7},
+yticklabels={-10.0\%,0.0\%,10.0\%,20.0\%,30.0\%,40.0\%,50.0\%,60.0\%,70.0\%}
 ]
-\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}, forget plot]
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
 table {%
-4096 0.5480544444616
-32768 19.1597129103316
-262144 157.545944438996
-2097152 324.139097936735
-16777216 438.36545865904
-68921000 456.080607974932
+4096 0.000748708257461202
+32768 0.0261744711889775
+262144 0.215226700053273
+2097152 0.442812975323409
+16777216 0.598859916200874
+68921000 0.623060939856465
 };
-\addplot [semithick, color1, dashed]
-table {%
-4096 732
-68921000 732
-};
-\addlegendentry{Theoretical max}
 \node at (axis cs:0.95,0.01)[
   scale=0.15,
   anchor=south east,
@@ -87,7 +78,7 @@ Hostname: gpusam};
 %% GIT git_short_commit : 72b7
 %% working_directory : /scratch/userdata/klye/projects/alsvinn_metrics/notebooks
 %% hostname : gpusam
-%% generated_on_date : 2019-10-31 13:01:26.892313
+%% generated_on_date : 2019-10-31 16:54:16.878432
 %% python_version: /usr/bin/python3 (Version: 3.7.4 (default, Jul  9 2019, 16:32:37) 
 [GCC 9.1.1 20190503 (Red Hat 9.1.1-1)])
 %% python modules:
@@ -1125,8 +1116,8 @@ Hostname: gpusam};
 %%     [function: savePlot, line: 233, file: ../python/plot_info.py]
 %%     [function: savePlot, line: 262, file: ../python/plot_info.py]
 %%     [function: showAndSave, line: 272, file: ../python/plot_info.py]
-%%     [function: plot_bandwidth_and_flops, line: 29, file: <ipython-input-5-7285aa5f7581>]
-%%     [function: <module>, line: 12, file: <ipython-input-6-58b4d178899b>]
+%%     [function: plot_bandwidth_and_flops, line: 40, file: <ipython-input-5-c18521c25c01>]
+%%     [function: <module>, line: 13, file: <ipython-input-6-fba0ca087d18>]
 %%     [function: run_code, line: 3267, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_ast_nodes, line: 3191, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_cell_async, line: 3020, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]

@@ -87,7 +87,7 @@ Hostname: gpusam};
 %% GIT git_short_commit : 72b7
 %% working_directory : /scratch/userdata/klye/projects/alsvinn_metrics/notebooks
 %% hostname : gpusam
-%% generated_on_date : 2019-10-31 13:01:26.892313
+%% generated_on_date : 2019-10-31 16:54:15.366134
 %% python_version: /usr/bin/python3 (Version: 3.7.4 (default, Jul  9 2019, 16:32:37) 
 [GCC 9.1.1 20190503 (Red Hat 9.1.1-1)])
 %% python modules:
@@ -1125,8 +1125,8 @@ Hostname: gpusam};
 %%     [function: savePlot, line: 233, file: ../python/plot_info.py]
 %%     [function: savePlot, line: 262, file: ../python/plot_info.py]
 %%     [function: showAndSave, line: 272, file: ../python/plot_info.py]
-%%     [function: plot_bandwidth_and_flops, line: 29, file: <ipython-input-5-7285aa5f7581>]
-%%     [function: <module>, line: 12, file: <ipython-input-6-58b4d178899b>]
+%%     [function: plot_bandwidth_and_flops, line: 30, file: <ipython-input-5-c18521c25c01>]
+%%     [function: <module>, line: 13, file: <ipython-input-6-fba0ca087d18>]
 %%     [function: run_code, line: 3267, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_ast_nodes, line: 3191, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_cell_async, line: 3020, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]

@@ -41,7 +41,7 @@ table {%
   rotate=0.0,
   align=right
 ]{By Kjetil Lye@ETHZ <kjetil.o.lye@gmail.com>
-Commit: 78220a53d323fa2d66f6075d6bbe1180b1c9fd07
+Commit: 72b7aef1a9fcd476214836ce67498f7c615926c3
 Repo: git@github.com:kjetil-lye/alsvinn_metrics.git
 Hostname: gpusam};
 \node at (axis cs:0.2,0.93)[
@@ -49,7 +49,7 @@ Hostname: gpusam};
   anchor=south east,
   text=black,
   rotate=0.0
-]{@7822};
+]{@72b7};
 \node at (axis cs:0.95,0.01)[
   scale=0.15,
   anchor=south east,
@@ -57,7 +57,7 @@ Hostname: gpusam};
   rotate=0.0,
   align=right
 ]{By Kjetil Lye@ETHZ <kjetil.o.lye@gmail.com>
-Commit: 78220a53d323fa2d66f6075d6bbe1180b1c9fd07
+Commit: 72b7aef1a9fcd476214836ce67498f7c615926c3
 Repo: git@github.com:kjetil-lye/alsvinn_metrics.git
 Hostname: gpusam};
 \end{axis}
@@ -71,14 +71,14 @@ Hostname: gpusam};
 
 %% ALWAYS INCLUDE THE COMMENTS WHEN COPYING THIS PLOT
 %% DO NOT REMOVE THE COMMENTS BELOW!
-%% GIT git_commit : 78220a53d323fa2d66f6075d6bbe1180b1c9fd07
+%% GIT git_commit : 72b7aef1a9fcd476214836ce67498f7c615926c3
 %% GIT git_repo_modified : True
 %% GIT git_branch : master
 %% GIT git_remote_url : git@github.com:kjetil-lye/alsvinn_metrics.git
-%% GIT git_short_commit : 7822
+%% GIT git_short_commit : 72b7
 %% working_directory : /scratch/userdata/klye/projects/alsvinn_metrics/notebooks
 %% hostname : gpusam
-%% generated_on_date : 2019-09-06 15:44:58.298291
+%% generated_on_date : 2019-10-31 13:01:28.427498
 %% python_version: /usr/bin/python3 (Version: 3.7.4 (default, Jul  9 2019, 16:32:37) 
 [GCC 9.1.1 20190503 (Red Hat 9.1.1-1)])
 %% python modules:
@@ -116,7 +116,6 @@ Hostname: gpusam};
 %%     posixpath: Unknown (/usr/lib64/python3.7/posixpath.py)
 %%     collections.abc: Unknown (/usr/lib64/python3.7/_collections_abc.py)
 %%     _sitebuiltins: Unknown (/usr/lib64/python3.7/_sitebuiltins.py)
-%%     abrt_exception_handler3: Unknown (/usr/lib64/python3.7/site-packages/abrt_exception_handler3.py)
 %%     types: Unknown (/usr/lib64/python3.7/types.py)
 %%     importlib: Unknown (/usr/lib64/python3.7/importlib/__init__.py)
 %%     importlib._bootstrap: Unknown (/usr/lib64/python3.7/importlib/_bootstrap.py)
@@ -140,6 +139,7 @@ Hostname: gpusam};
 %%     mpl_toolkits: Unknown (None)
 %%     zope: Unknown (None)
 %%     paste: Unknown (None)
+%%     abrt_exception_handler3: Unknown (/usr/lib/python3.7/site-packages/abrt_exception_handler3.py)
 %%     pdftools: Unknown (None)
 %%     sphinxcontrib: Unknown (None)
 %%     zc: Unknown (None)
@@ -1116,9 +1116,10 @@ Hostname: gpusam};
 %%     [function: savePlot, line: 233, file: ../python/plot_info.py]
 %%     [function: savePlot, line: 262, file: ../python/plot_info.py]
 %%     [function: showAndSave, line: 272, file: ../python/plot_info.py]
-%%     [function: <module>, line: 37, file: <ipython-input-6-6cb6f762f521>]
+%%     [function: plot_bandwidth_and_flops, line: 39, file: <ipython-input-5-7285aa5f7581>]
+%%     [function: <module>, line: 12, file: <ipython-input-6-58b4d178899b>]
 %%     [function: run_code, line: 3267, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
-%%     [function: run_ast_nodes, line: 3185, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
+%%     [function: run_ast_nodes, line: 3191, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_cell_async, line: 3020, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: _pseudo_sync_runner, line: 67, file: /usr/lib/python3.7/site-packages/IPython/core/async_helpers.py]
 %%     [function: _run_cell, line: 2845, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
@@ -1131,6 +1132,10 @@ Hostname: gpusam};
 %%     [function: dispatch_shell, line: 272, file: /usr/lib/python3.7/site-packages/ipykernel/kernelbase.py]
 %%     [function: wrapper, line: 315, file: /usr/lib64/python3.7/site-packages/tornado/gen.py]
 %%     [function: process_one, line: 365, file: /usr/lib/python3.7/site-packages/ipykernel/kernelbase.py]
+%%     [function: run, line: 1113, file: /usr/lib64/python3.7/site-packages/tornado/gen.py]
+%%     [function: __init__, line: 1046, file: /usr/lib64/python3.7/site-packages/tornado/gen.py]
+%%     [function: wrapper, line: 335, file: /usr/lib64/python3.7/site-packages/tornado/gen.py]
+%%     [function: dispatch_queue, line: 378, file: /usr/lib/python3.7/site-packages/ipykernel/kernelbase.py]
 %%     [function: run, line: 1113, file: /usr/lib64/python3.7/site-packages/tornado/gen.py]
 %%     [function: inner, line: 1199, file: /usr/lib64/python3.7/site-packages/tornado/gen.py]
 %%     [function: null_wrapper, line: 276, file: /usr/lib64/python3.7/site-packages/tornado/stack_context.py]
