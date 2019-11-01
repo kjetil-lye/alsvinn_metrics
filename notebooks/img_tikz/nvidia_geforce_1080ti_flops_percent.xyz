@@ -2,47 +2,33 @@
 \begin{tikzpicture}
 
 \definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
-\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
 
 \begin{axis}[
 height=\figureheight,
-legend cell align={left},
-legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
 log basis x={10},
-log basis y={10},
 tick align=outside,
 tick pos=left,
 width=\figurewidth,
 x grid style={white!69.01960784313725!black},
 xlabel={Number of cells},
-xmin=2518.02690874137, xmax=112111755.049157,
+xmajorgrids,
+xmin=2702.35220126288, xmax=25429504.2311232,
 xmode=log,
 xtick style={color=black},
-xtick={100,1000,10000,100000,1000000,10000000,100000000,1000000000,10000000000},
-xticklabels={\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\),\(\displaystyle {10^{4}}\),\(\displaystyle {10^{5}}\),\(\displaystyle {10^{6}}\),\(\displaystyle {10^{7}}\),\(\displaystyle {10^{8}}\),\(\displaystyle {10^{9}}\),\(\displaystyle {10^{10}}\)},
 y grid style={white!69.01960784313725!black},
-ylabel={Achieved bandwidth (GB/s)},
-ymin=0.382418888753854, ymax=1049.04821687328,
-ymode=log,
-ytick style={color=black},
-ytick={0.01,0.1,1,10,100,1000,10000,100000},
-yticklabels={\(\displaystyle {10^{-2}}\),\(\displaystyle {10^{-1}}\),\(\displaystyle {10^{0}}\),\(\displaystyle {10^{1}}\),\(\displaystyle {10^{2}}\),\(\displaystyle {10^{3}}\),\(\displaystyle {10^{4}}\),\(\displaystyle {10^{5}}\)}
+ylabel={Achieved Gflops (\% of max)},
+ymajorgrids,
+ymin=-0.01519630080784, ymax=0.638042464717651,
+ytick style={color=black}
 ]
-\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}, forget plot]
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
 table {%
-4096 0.5480544444616
-32768 19.1597129103316
-262144 157.545944438996
-2097152 324.139097936735
-16777216 438.36545865904
-68921000 456.080607974932
+4096 0.0144963703524096
+32768 0.0583037017680723
+262144 0.309483914884789
+2097152 0.491297921577919
+16777216 0.608349793557401
 };
-\addplot [semithick, color1, dashed]
-table {%
-4096 732
-68921000 732
-};
-\addlegendentry{Theoretical max}
 \node at (axis cs:0.95,0.01)[
   scale=0.15,
   anchor=south east,
@@ -59,23 +45,12 @@ Hostname: gpusam};
   text=black,
   rotate=0.0
 ]{@72b7};
-\node at (axis cs:0.95,0.01)[
-  scale=0.15,
-  anchor=south east,
-  text=white!50.19607843137255!black,
-  rotate=0.0,
-  align=right
-]{By Kjetil Lye@ETHZ <kjetil.o.lye@gmail.com>
-Commit: 72b7aef1a9fcd476214836ce67498f7c615926c3
-Repo: git@github.com:kjetil-lye/alsvinn_metrics.git
-Hostname: gpusam};
 \end{axis}
 
 \end{tikzpicture}
 
 %% INCLUDE THE COMMENTS AT THE END WHEN COPYING
 %%%%%%%%%%%%%TITLE%%%%%%%%%%%%%%%%%
-%% None
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% ALWAYS INCLUDE THE COMMENTS WHEN COPYING THIS PLOT
@@ -87,7 +62,7 @@ Hostname: gpusam};
 %% GIT git_short_commit : 72b7
 %% working_directory : /scratch/userdata/klye/projects/alsvinn_metrics/notebooks
 %% hostname : gpusam
-%% generated_on_date : 2019-10-31 13:01:26.892313
+%% generated_on_date : 2019-10-31 16:54:24.614766
 %% python_version: /usr/bin/python3 (Version: 3.7.4 (default, Jul  9 2019, 16:32:37) 
 [GCC 9.1.1 20190503 (Red Hat 9.1.1-1)])
 %% python modules:
@@ -1123,10 +1098,9 @@ Hostname: gpusam};
 %%     PIL.PngImagePlugin: 0.9 (/usr/lib64/python3.7/site-packages/PIL/PngImagePlugin.py)
 %% stacktrace:
 %%     [function: savePlot, line: 233, file: ../python/plot_info.py]
-%%     [function: savePlot, line: 262, file: ../python/plot_info.py]
 %%     [function: showAndSave, line: 272, file: ../python/plot_info.py]
-%%     [function: plot_bandwidth_and_flops, line: 29, file: <ipython-input-5-7285aa5f7581>]
-%%     [function: <module>, line: 12, file: <ipython-input-6-58b4d178899b>]
+%%     [function: plot_bandwidth_and_flops, line: 60, file: <ipython-input-5-c18521c25c01>]
+%%     [function: <module>, line: 13, file: <ipython-input-7-0f6e65fd3159>]
 %%     [function: run_code, line: 3267, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_ast_nodes, line: 3191, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
 %%     [function: run_cell_async, line: 3020, file: /usr/lib/python3.7/site-packages/IPython/core/interactiveshell.py]
